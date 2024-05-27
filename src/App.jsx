@@ -2,8 +2,6 @@ import React from "react";
 import { useState } from "react";
 
 const App = () => {
-  
-
   const [count, setCount] = useState(0);
 
   const handleCountUp = () => {
@@ -16,43 +14,20 @@ const App = () => {
 
   const handleReset = () => {
     setCount(0);
-  }
-
+  };
 
   return (
-    <div>
-      <h1>
-        {name}
-      </h1>
-      <section>
+    <div className="container">
+     <h2>COUNTER</h2>
+      <section className="wrapper">
         Count : {count}
-        <button onClick={handleCountUp}>+</button>
-        <button onClick={handleCountDown}>-</button>
-        <button onClick={handleReset}>Reset</button>
-        <div>
-
-        </div>
+        <button className="plusBtn" onClick={handleCountUp}>+</button>
+        <button className="minusBtn" onClick={handleCountDown}>-</button>
+        <button className="resetBtn" onClick={handleReset}>Reset</button>
+        <div></div>
       </section>
     </div>
   );
 };
 
 export default App;
-
-
-// const App = () => {
-//   const [dark, setDark] = useState(false);
-
-//   const handleDarkMode = () => {
-//     setDark(!dark);
-//   };
-//   return (
-//     <div>
-//       <h1>다크모드</h1>
-//       {dark ? "Dark" : "Light"}
-//       <button onChange={handleDarkMode}>change</button>
-//     </div>
-//   );
-// };
-
-// export default App;
